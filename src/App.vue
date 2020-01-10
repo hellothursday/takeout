@@ -6,6 +6,7 @@
 
 <script>
   import Header from 'components/header'
+  import {getSeller} from "api"
 
   export default {
     name: 'app',
@@ -18,6 +19,14 @@
       }
     },
     created() {
+      this._getSeller()
+    },
+    methods: {
+      _getSeller() {
+        getSeller().then(seller => {
+          this.seller = seller
+        })
+      }
     }
   }
 </script>

@@ -13,6 +13,7 @@ module.exports = {
     config.resolve.alias
       .set('components', resolve('src/components'))
       .set('common', resolve('src/common'))
+      .set('api', resolve('src/api'))
   },
   css: {
     loaderOptions: {

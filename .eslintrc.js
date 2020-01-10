@@ -13,9 +13,10 @@ module.exports = {
   },
   overrides: [
     {
-      'files': ['*.vue'],
+      'files': ['*.vue', '*.js'],
       'rules': {
         'indent': 0,
+        'object-curly-spacing': 0,
         'space-before-function-paren': 0
       }
     }
