@@ -6,23 +6,23 @@
 
 <script>
   import Header from 'components/header'
-  import {getSeller} from "api"
+  import { getSeller } from 'api'
 
   export default {
     name: 'app',
     components: {
       Header
     },
-    data() {
+    data () {
       return {
         seller: {}
       }
     },
-    created() {
+    created () {
       this._getSeller()
     },
     methods: {
-      _getSeller() {
+      _getSeller () {
         getSeller().then(seller => {
           this.seller = seller
         })
