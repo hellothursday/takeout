@@ -15,6 +15,10 @@ npm run serve
 npm run build
 ```
 
+### merits
+1. You can invoke the custom component which has been instantiated in api form through `create-api module` in cube-ui.
+2. Switching the pages through the `TabBar` component embedded in cube-ui instead of Vue-router, which you can implement smooth switching effects like native apps.
+
 #### Links
 - [cube-ui](https://didi.github.io/cube-ui/#/en-US)
 - [better-scroll](http://ustbhuangyi.github.io/better-scroll/#/en)
