@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import qs from 'query-string'
   import Header from 'components/header'
   import { getSeller } from 'api'
   import Tab from './components/tab/Tab'
@@ -23,7 +24,9 @@
     },
     data () {
       return {
-        seller: {}
+        seller: {
+          id: qs.parse(location.search).id
+        }
       }
     },
     computed: {
@@ -40,8 +43,10 @@
     },
     methods: {
       _getSeller () {
-        getSeller().then(seller => {
-          this.seller = seller
+        getSeller({
+          id: this.seller.id
+        }).then((seller) => {
+          this.seller = Object.assign({}, this.seller, seller)
         })
       }
     }
